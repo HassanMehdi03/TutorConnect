@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginTeacher">
+
+    <View
+        android:id="@+id/teacher_pic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/teacher_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_login_teacher"
+        android:gravity="center"
+        android:text="@string/login_as_teacher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/teacher_pic"
+        android:fontFamily="@font/adamina"
+        android:background="@drawable/textview_border"
+        android:textSize="25sp"
+        android:textColor="@color/logo_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/til_email_teacher"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login_teacher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxStrokeColor="@color/logo_text_color"
+        android:textColorHint="@color/logo_text_color"
+        app:hintTextColor="@color/logo_text_color">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_email"
+            android:fontFamily="@font/adamina"
+            android:id="@+id/et_email_teacher"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/logo_text_color"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/til_password_teacher"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/til_email_teacher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxStrokeColor="@color/logo_text_color"
+        android:textColorHint="@color/logo_text_color"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/logo_text_color"
+        app:hintTextColor="@color/logo_text_color">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_email"
+            android:fontFamily="@font/adamina"
+            android:id="@+id/et_password_teacher"
+            android:inputType="textPassword"
+            android:textColor="@color/logo_text_color"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_password_teacher"
+        android:layout_marginStart="36dp"
+        android:textColor="@color/logo_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_forgetpasswordteacher"
+        android:fontFamily="@font/adamina"
+        android:textSize="12.5sp" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_login_teacher"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:fontFamily="@font/adamina"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_forgetpasswordteacher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/logo_text_color" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/don_t_have_an_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login_teacher"
+        android:layout_marginStart="100dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/tv_create"
+        android:textSize="13sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_here"
+        app:layout_constraintBottom_toBottomOf="@id/tv_create"
+        app:layout_constraintStart_toEndOf="@id/tv_create"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login_teacher"
+        android:textColor="@color/logo_text_color"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/tv_create_account"
+        android:fontFamily="@font/adamina"
+        android:textStyle="bold"
+        android:textSize="13sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

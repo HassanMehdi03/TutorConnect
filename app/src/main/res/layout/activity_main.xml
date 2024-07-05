@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <View
         android:layout_width="@dimen/splash_circle_images"
         android:layout_height="@dimen/splash_circle_images"

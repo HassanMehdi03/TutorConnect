@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">TutorConnect</string>
     <string name="tutor_connect">Tutor Connect</string>
+    <string name="student">Student</string>
+    <string name="find_local_and_online_educators_for_tutoring_coaching_and_assistance_with_academic_work">Find local and online educators for tutoring, coaching, and assistance with academic work.</string>
+    <string name="welcome">Welcome</string>
+    <string name="teacher">Teacher</string>
+    <string name="go">Go</string>
+    <string name="login_as_student">Login as Student</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account? </string>
+    <string name="register_here">Register here!</string>
+    <string name="login_as_teacher">Login as Teacher</string>
+    <string name="register_as_teacher">Register as Teacher</string>
+    <string name="sign_up_as_teacher">Sign up as Teacher</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="enter_birth_date">Enter Birth Date</string>
+    <string name="enter_location">Enter Location</string>
+    <string name="enter_your_postal_code">Enter your postal code</string>
+    <string name="speciality_strength_or_current_role">Speciality, Strength or Current role</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_you_mobile_number">Enter you Mobile Number</string>
 </resources>
