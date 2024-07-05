@@ -24,4 +24,32 @@
     <string name="speciality_strength_or_current_role">Speciality, Strength or Current role</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="enter_you_mobile_number">Enter you Mobile Number</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="select_grade">Select grade</string>
+    <string name="enter_your_insititute_name_with_city">Enter your Insititute name with city</string>
+    <string name="enter_your_orgranization_name">Enter your orgranization name</string>
+    <string name="enter_your_job_description">Enter your job description</string>
+    <string name="enter_your_cgpa">Enter your CGPA</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="female">Female</string>
+    <string name="enter_your_fee_in_us">Enter your Fee in $US</string>
+    <string name="enter_your_profile_decsription">Enter your profile decsription</string>
+    <string name="this_is_most_important_section_for_you">This is Most Important Section for you</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login_here">Login here</string>
+    <string-array name="grades_array">
+        <item>Grade 1</item>
+        <item>Grade 2</item>
+        <item>Grade 3</item>
+        <item>Grade 4</item>
+        <item>Grade 5</item>
+        <item>Grade 6</item>
+        <item>Grade 7</item>
+        <item>Grade 8</item>
+        <item>Grade 9</item>
+        <item>Grade 10</item>
+        <item>Grade 11</item>
+        <item>Grade 12</item>
+    </string-array>
 </resources>

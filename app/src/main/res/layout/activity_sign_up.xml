@@ -77,17 +77,5 @@
         app:layout_constraintTop_toBottomOf="@+id/teacher_pic"
         app:layout_constraintStart_toStartOf="parent"
         android:textStyle="bold"/>
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_signup"
-        android:text="@string/go"
-        android:textColor="@color/white"
-        android:fontFamily="@font/adamina"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/tv_teacher"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/logo_text_color"
-        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
