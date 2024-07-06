@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -12,7 +11,7 @@
         android:id="@+id/view_register_teacher"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@drawable/registerteacher"
+        android:background="@drawable/register_teacher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,610 +20,579 @@
         android:id="@+id/tv_register_here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginBottom="30dp"
         android:fontFamily="@font/adamina"
         android:text="@string/sign_up_as_teacher"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/view_register_teacher"
         app:layout_constraintEnd_toEndOf="@id/view_register_teacher"
         app:layout_constraintStart_toStartOf="@id/view_register_teacher" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_signup"
-        android:gravity="center"
-        android:text="@string/register_as_teacher"
-        android:layout_margin="10dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_register_here"
-        android:fontFamily="@font/adamina"
-        android:background="@drawable/textview_border"
-        android:textSize="25sp"
-        android:textColor="@color/logo_text_color"
-        android:textStyle="bold"
-        android:layout_marginTop="5dp" />
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_signup"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_marginBottom="20dp"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_namee"
-                android:layout_width="0dp"
+                android:id="@+id/ilName"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_name"
+                    android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_your_name"
+                    android:hint="@string/name"
                     android:inputType="textPersonName"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_emaill"
-                android:layout_width="0dp"
+                android:id="@+id/ilEmail"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_namee"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@+id/ilName">
+
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_email"
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_your_email"
+                    android:hint="@string/email"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_password"
-                android:layout_width="0dp"
+                android:id="@+id/ilPassword"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_emaill"
+                app:layout_constraintTop_toBottomOf="@+id/ilEmail"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/logo_text_color"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:passwordToggleTint="@color/password_toggle_color">
+
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_password_teacher"
+                    android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_password"
+                    android:hint="@string/password"
                     android:inputType="textPassword"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_con_password"
-                android:layout_width="0dp"
+                android:id="@+id/ilCPassword"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_password"
+                app:layout_constraintTop_toBottomOf="@+id/ilPassword"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/logo_text_color"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:passwordToggleTint="@color/password_toggle_color">
+
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_confirm_password"
+                    android:id="@+id/etCPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
                     android:hint="@string/confirm_password"
                     android:inputType="textPassword"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <TextView
                 android:id="@+id/tv_select_gender"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="@string/select_gender"
-                android:textColor="@color/logo_text_color"
-                android:textSize="16sp"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:gravity="center"
+                android:text="@string/gender"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_con_password"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"/>
+                app:layout_constraintTop_toBottomOf="@id/ilCPassword" />
 
             <RadioGroup
                 android:id="@+id/radioGroup_gender"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginEnd="@dimen/margin_start_end"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_select_gender"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
+                app:layout_constraintTop_toBottomOf="@id/tv_select_gender">
 
                 <RadioButton
-                    android:id="@+id/radio_male"
+                    android:id="@+id/rbMale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male"
-                    android:textColor="@color/logo_text_color"
-                    android:fontFamily="@font/adamina"/>
-
-                <RadioButton
-                    android:id="@+id/radio_female"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/female"
-                    android:textColor="@color/logo_text_color"
                     android:fontFamily="@font/adamina"
-                    />
+                    android:text="@string/male"
+                    android:textColor="@color/text_color" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:text="@string/female"
+                    android:textColor="@color/text_color" />
 
             </RadioGroup>
 
-
-
-
-
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_spec"
-                android:layout_width="0dp"
+                android:id="@+id/ilSpec"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/radioGroup_gender"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@id/radioGroup_gender">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_speciality"
+                    android:id="@+id/etSpeciality"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
                     android:hint="@string/speciality_strength_or_current_role"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/logo_text_color" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_birth"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_spec"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_birth_date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_birth_date"
-                    android:inputType="date"
-                    android:textColor="@color/logo_text_color" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_loc"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_birth"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_location"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_location"
                     android:inputType="text"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_post"
-                android:layout_width="0dp"
+
+            <Button
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:text="@string/birth_date"
+                android:id="@+id/btnDOB"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                app:layout_constraintTop_toBottomOf="@id/ilSpec"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_loc"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@id/btnDOB">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_postal"
+                    android:id="@+id/etLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_your_postal_code"
+                    android:hint="@string/location"
+                    android:inputType="text"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ilLoc">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPostal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:hint="@string/postal_code"
                     android:inputType="number"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_cell"
-                android:layout_width="0dp"
+                android:id="@+id/ilCell"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_post"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@id/ilPost">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_phone"
+                    android:id="@+id/etPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_you_mobile_number"
-                    android:inputType="text"
-                    android:textColor="@color/logo_text_color" />
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_sub"
-                android:layout_width="0dp"
+                android:id="@+id/ilSub"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_cell"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@id/ilCell">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_subject"
+                    android:id="@+id/etSubject"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="Enter your subject"
+                    android:hint="@string/subject"
                     android:inputType="text"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/tv_select_grade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="@dimen/input_field_margin_top"
                 android:text="@string/select_grade"
-                android:textColor="@color/logo_text_color"
-                android:textSize="16sp"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_sub" />
+                app:layout_constraintTop_toBottomOf="@id/ilSub" />
+
 
             <Spinner
-                android:id="@+id/spinner_grade"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_select_grade"
-                android:backgroundTint="@color/logo_text_color"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_intname"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/spinner_grade"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_institute_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_your_insititute_name_with_city"
-                    android:inputType="text"
-                    android:textColor="@color/logo_text_color" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_deg"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_intname"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_degree"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/adamina"
-                    android:hint="Enter Degree name"
-                    android:inputType="text"
-                    android:textColor="@color/logo_text_color" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_exp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_deg"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_experience"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/adamina"
-                    android:hint="Enter your Experiences in years"
-                    android:inputType="number"
-                    android:textColor="@color/logo_text_color" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_gpa"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_exp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_cgpa"
+                android:id="@+id/spGrade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/adamina"
-                android:hint="@string/enter_your_cgpa"
-                android:inputType="number"
-                android:textColor="@color/logo_text_color" />
-            </com.google.android.material.textfield.TextInputLayout>
+                app:layout_constraintTop_toBottomOf="@id/tv_select_grade"
+                app:layout_constraintStart_toStartOf="parent"
+                android:entries="@array/grades_array"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                 />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_org"
-                android:layout_width="0dp"
+                android:id="@+id/ilInstName"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_gpa"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@id/spGrade">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_organization"
+                    android:id="@+id/etInstituteName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_your_orgranization_name"
+                    android:hint="@string/institute_name_with_city"
                     android:inputType="text"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_desc"
-                android:layout_width="0dp"
+                android:id="@+id/ilDeg"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_org"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@id/ilInstName">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_description"
+                    android:id="@+id/etDegree"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_your_job_description"
+                    android:hint="@string/degree_name"
                     android:inputType="text"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_fe"
-                android:layout_width="0dp"
+                android:id="@+id/ilExp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_desc"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@id/ilDeg">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_fee"
+                    android:id="@+id/etExperience"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_your_fee_in_us"
+                    android:hint="@string/experiences_in_years"
                     android:inputType="number"
-                    android:textColor="@color/logo_text_color" />
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilGpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ilExp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCgpa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:hint="@string/Cgpa"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilOrg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ilGpa">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etOrganization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:hint="@string/organization_name"
+                    android:inputType="text"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ilOrg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etJobDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:hint="@string/job_description"
+                    android:inputType="text"
+                    android:textColor="@color/text_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilFee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ilDesc">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:hint="@string/fee_in_us"
+                    android:inputType="number"
+                    android:textColor="@color/text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/tv_imp"
+                android:id="@+id/tvImp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/text_margin_top"
+                android:layout_marginStart="32dp"
                 android:fontFamily="@font/adamina"
                 android:text="@string/this_is_most_important_section_for_you"
                 android:textColor="@color/logo_text_color"
                 android:textSize="13sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_fe"
-                android:layout_marginStart="32dp"
-                 />
+                app:layout_constraintTop_toBottomOf="@id/ilFee" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_prof"
-                android:layout_width="0dp"
+                android:id="@+id/ilProf"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:boxStrokeColor="@color/logo_text_color"
-                app:hintTextColor="@color/logo_text_color"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/input_field_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:textColorHint="@color/text_color"
+                app:boxStrokeColor="@color/input_field_box_stroke_color"
+                app:hintTextColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_imp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/logo_text_color">
+                app:layout_constraintTop_toBottomOf="@id/tvImp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_profile"
+                    android:id="@+id/etProfile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
-                    android:hint="@string/enter_your_profile_decsription"
+                    android:hint="@string/profile_description"
                     android:inputType="text"
                     android:textColor="@color/logo_text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:layout_width="140dp"
+                android:id="@+id/btnSignUp"
+                android:layout_width="@dimen/button_width"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_sign"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/button_color"
+                android:fontFamily="@font/adamina"
                 android:text="@string/sign_up"
                 android:textColor="@color/white"
-                android:fontFamily="@font/adamina"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                app:layout_constraintTop_toBottomOf="@id/et_prof"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:backgroundTint="@color/logo_text_color" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ilProf" />
 
             <TextView
+                android:id="@+id/tvCreate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:layout_marginBottom="@dimen/text_margin_bottom"
                 android:text="@string/already_have_an_account"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_sign"
-                android:layout_marginStart="100dp"
                 android:textColor="@color/black"
-                android:layout_marginTop="20dp"
-                android:id="@+id/tv_create"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
             <TextView
+                android:id="@+id/tvLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/login_here"
-                app:layout_constraintBottom_toBottomOf="@id/tv_create"
-                app:layout_constraintStart_toEndOf="@id/tv_create"
-                app:layout_constraintTop_toBottomOf="@+id/btn_sign"
-                android:textColor="@color/logo_text_color"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="20dp"
-                android:id="@+id/tv_login"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="@dimen/text_margin_top"
                 android:fontFamily="@font/adamina"
+                android:text="@string/login"
+                android:textColor="@color/text_color"
+                android:textSize="13sp"
                 android:textStyle="bold"
-                android:textSize="13sp" />
+                app:layout_constraintBottom_toBottomOf="@id/tvCreate"
+                app:layout_constraintStart_toEndOf="@id/tvCreate"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
