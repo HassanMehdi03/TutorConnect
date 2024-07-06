@@ -77,6 +77,9 @@
     <string name="new_password">New Password</string>
     <string name="save">Save</string>
     <string name="cont">Continue</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="upload_picture">Upload Picture</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>
