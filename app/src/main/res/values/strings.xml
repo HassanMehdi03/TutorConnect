@@ -65,6 +65,18 @@
     <string name="please_select_your_grade">Please select your grade</string>
     <string name="input_required">Input Required</string>
     <string name="registered_successfully">Registered Successfully</string>
+    <string name="it_s_a_pleasure_to_meet_you_we_are_excited_that_you_re_here_so_let_s_get_started">It’s a pleasure to meet you. We are excited that you’re here so let’s get started!</string>
+    <string name="get_started">Get Started</string>
+    <string name="login_successfully">Login successfully</string>
+    <string name="don_t_worry_it_happens_please_enter_the_email_we_will_send_you_email_on_this_mail">Don’t worry ! It happens. Please enter the email we will send you email on this mail.</string>
+    <string name="email_verification">Email Verification</string>
+    <string name="please_verify_the_email_that_we_have_sent_you">Please verify the email that we have sent you</string>
+    <string name="submit">Submit</string>
+    <string name="don_t_receive_email">Don’t receive email ?</string>
+    <string name="resend">Resend</string>
+    <string name="new_password">New Password</string>
+    <string name="save">Save</string>
+    <string name="cont">Continue</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>

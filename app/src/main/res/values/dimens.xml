@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="splash_circle_images">250dp</dimen>
+    <dimen name="splash_circle_images">220dp</dimen>
     <dimen name="margin_start_end">10dp</dimen>
     <dimen name="text_margin_top">10dp</dimen>
     <dimen name="input_field_margin_top">15dp</dimen>

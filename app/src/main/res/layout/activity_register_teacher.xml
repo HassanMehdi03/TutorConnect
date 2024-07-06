@@ -566,6 +566,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ilProf" />
 
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toEndOf="@id/btnSignUp"
+                app:layout_constraintTop_toBottomOf="@id/ilProf"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/pbLoading"
+                />
+
             <TextView
                 android:id="@+id/tvCreate"
                 android:layout_width="wrap_content"
