@@ -7,16 +7,20 @@ import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ForgetPasswordTeacher extends AppCompatActivity
-{
+public class ForgetPasswordStudent extends AppCompatActivity {
+
     private Button btnContinue;
     private TextInputEditText etEmail;
     private FirebaseAuth auth;
@@ -26,11 +30,13 @@ public class ForgetPasswordTeacher extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forget_password_teacher);
+        setContentView(R.layout.activity_forget_password_student);
 
         init();
         btnContinue.setOnClickListener(v->forgetPassword());
+
     }
+
 
     private void forgetPassword()
     {
@@ -43,30 +49,29 @@ public class ForgetPasswordTeacher extends AppCompatActivity
             return;
         }
 
-        editor.putString("key_resend_email_teacher",email);
+        editor.putString("key_resend_email_student",email);
         editor.apply();
 
         auth.sendPasswordResetEmail(email)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(ForgetPasswordTeacher.this, R.string.email_sent, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ForgetPasswordStudent.this, R.string.email_sent, Toast.LENGTH_SHORT).show();
                         moveToVerifyEmailPage();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(ForgetPasswordTeacher.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ForgetPasswordStudent.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
     }
 
-
     private void moveToVerifyEmailPage()
     {
-        startActivity(new Intent(ForgetPasswordTeacher.this,VerifyEmailTeacher.class));
+        startActivity(new Intent(ForgetPasswordStudent.this,VerifyEmailStudent.class));
     }
 
     private void init()
@@ -78,4 +83,5 @@ public class ForgetPasswordTeacher extends AppCompatActivity
         sPref=getSharedPreferences("UserPasswordReset",MODE_PRIVATE);
         editor=sPref.edit();
     }
+
 }

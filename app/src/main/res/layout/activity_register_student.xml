@@ -205,7 +205,7 @@
                 android:id="@+id/btnSignUp"
                 android:layout_width="@dimen/button_width"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
                 android:text="@string/sign_up"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -213,11 +213,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iladdress" />
 
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toEndOf="@id/btnSignUp"
+                app:layout_constraintTop_toBottomOf="@id/iladdress"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/pbLoading"
+                />
+
             <TextView
                 android:id="@+id/tvCreate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="85dp"
                 android:layout_marginTop="@dimen/text_margin_top"
                 android:layout_marginBottom="@dimen/text_margin_bottom"
                 android:text="@string/already_have_an_account"
