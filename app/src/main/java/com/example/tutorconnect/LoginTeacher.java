@@ -45,7 +45,6 @@ public class LoginTeacher extends AppCompatActivity {
     private void moveToForgetPasswordTeacher()
     {
         startActivity(new Intent(LoginTeacher.this, ForgetPasswordTeacher.class));
-        finish();
     }
 
     private void login()

@@ -70,8 +70,7 @@
     <string name="login_successfully">Login successfully</string>
     <string name="don_t_worry_it_happens_please_enter_the_email_we_will_send_you_email_on_this_mail">Don’t worry ! It happens. Please enter the email we will send you email on this mail.</string>
     <string name="email_verification">Email Verification</string>
-    <string name="please_verify_the_email_that_we_have_sent_you">Please verify the email that we have sent you</string>
-    <string name="submit">Submit</string>
+    <string name="please_change_password_through_the_email_that_we_have_sent_you_and_then_click_on_the_save_button">Please change password through the email that we have sent you and then click on the save button</string>
     <string name="don_t_receive_email">Don’t receive email ?</string>
     <string name="resend">Resend</string>
     <string name="new_password">New Password</string>
@@ -80,6 +79,7 @@
     <string name="phone_number">Phone Number</string>
     <string name="address">Address</string>
     <string name="upload_picture">Upload Picture</string>
+    <string name="email_sent">Email sent</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>

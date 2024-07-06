@@ -115,8 +115,6 @@ public class RegisterTeacher extends AppCompatActivity {
 
             HashMap<String, Object> records = new HashMap<>();
             records.put("name", name);
-            records.put("email", email);
-            records.put("password", password);
             records.put("speciality", speciality);
             records.put("location", location);
             records.put("postal", postal);
