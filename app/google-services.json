@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "761522330276",
+    "project_id": "tutorconnect-d2b64",
+    "storage_bucket": "tutorconnect-d2b64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761522330276:android:3d26cdee87e8ceadb0a431",
+        "android_client_info": {
+          "package_name": "com.example.tutorconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEupOITNrk_X5RT2DztcF48Kd5chCiIj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
