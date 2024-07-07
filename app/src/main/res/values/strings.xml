@@ -122,6 +122,7 @@
     <string name="description">Description</string>
     <string name="contact_tutor">Contact Tutor</string>
     <string name="experience">Experience</string>
+    <string name="logout">Logout</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>
