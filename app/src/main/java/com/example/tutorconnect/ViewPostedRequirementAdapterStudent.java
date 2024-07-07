@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class PostedRequirementAdapter extends RecyclerView.Adapter<PostedRequirementAdapter.ViewHolder>{
+public class ViewPostedRequirementAdapterStudent extends RecyclerView.Adapter<ViewPostedRequirementAdapterStudent.ViewHolder>{
 
     ArrayList<PostRequirement> data;
 
-    public PostedRequirementAdapter(Context c, ArrayList<PostRequirement> data)
+    public ViewPostedRequirementAdapterStudent(Context c, ArrayList<PostRequirement> data)
     {
         this.data=data;
     }
@@ -23,7 +23,7 @@ public class PostedRequirementAdapter extends RecyclerView.Adapter<PostedRequire
 
     @NonNull
     @Override
-    public PostedRequirementAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewPostedRequirementAdapterStudent.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_post_requirement_design,parent,false);
 
         return new ViewHolder(v);
@@ -31,7 +31,7 @@ public class PostedRequirementAdapter extends RecyclerView.Adapter<PostedRequire
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PostedRequirementAdapter.ViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull ViewPostedRequirementAdapterStudent.ViewHolder holder, int position)
     {
         PostRequirement i=data.get(position);
         holder.tvSubjectDetails.setText("Online "+i.getSubject()+" teacher required");

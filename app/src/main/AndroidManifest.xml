@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TutorConnect"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".VerfiyEmailTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".SettingTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPostedRequirementsTeacher"
+            android:exported="false" />
         <activity
             android:name=".FindTutor"
             android:exported="false" />
@@ -31,7 +43,7 @@
             android:name=".PostRequirementStudent"
             android:exported="false" />
         <activity
-            android:name=".VerifyEmailStudent"
+            android:name=".VerifyEmailForPasswordResetStudent"
             android:exported="false" />
         <activity
             android:name=".ForgetPasswordStudent"
@@ -46,7 +58,7 @@
             android:name=".NewPasswordTeacher"
             android:exported="false" />
         <activity
-            android:name=".VerifyEmailTeacher"
+            android:name=".VerifyEmailForPasswordResetTeacher"
             android:exported="false" />
         <activity
             android:name=".ForgetPasswordTeacher"
@@ -74,7 +86,7 @@
             android:exported="false" />
         <activity
             android:name=".Splash"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
