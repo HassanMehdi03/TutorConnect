@@ -81,6 +81,37 @@
     <string name="upload_picture">Upload Picture</string>
     <string name="email_sent">Email sent</string>
     <string name="please_enter_your_address">Please enter your address</string>
+    <string name="home_page">Home Page</string>
+    <string name="post_a_requirement">Post a requirement</string>
+    <string name="find_a_tutor">Find a tutor</string>
+    <string name="view_posted_requirements">View posted requirements</string>
+    <string name="profile">Profile</string>
+    <string name="user_info">User Info</string>
+    <string name="setting">Setting</string>
+    <string name="request_a_tutor">Request a Tutor</string>
+    <string name="details_of_your_requirements">Details of your requirements</string>
+    <string name="level">Level</string>
+    <string name="i_want">I want</string>
+    <string name="budget_in_us">Budget in $US</string>
+    <string name="gender_preference">Gender Preference</string>
+    <string name="tutors_wanted">Tutors wanted</string>
+    <string name="only_one">Only One</string>
+    <string name="more_than_one">More than one</string>
+    <string name="as_many_as_possible">As many as possible</string>
+    <string name="i_need_someone">I need someone</string>
+    <string name="part_time">Part Time</string>
+    <string name="i_can_communicate_with_tutor_in_languages">I can communicate with tutor in (languages)</string>
+    <string name="language">Language</string>
+    <string name="please_enter_location">Please enter location</string>
+    <string name="please_enter_details_of_requirement">Please enter details of you requirements</string>
+    <string name="please_enter_your_budget">Please enter your budget</string>
+    <string name="please_enter_language">Please enter your language</string>
+    <string name="please_select_gender_preference">Please select gender preference</string>
+    <string name="please_select_tutors_wanted">Please select tutors wanted</string>
+    <string name="please_select_time_preference">Please select time preference</string>
+    <string name="please_select_your_level">Please select your level</string>
+    <string name="please_select_your_want">Please select what you want</string>
+    <string name="requirement_posted">Requirement Posted</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>
@@ -96,4 +127,45 @@
         <item>Grade 11</item>
         <item>Grade 12</item>
     </string-array>
+
+    <string-array name="level_array">
+        <item>-- Select Level --</item>
+        <item>--Skill Level--</item>
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Expert</item>
+        <item>--Grades--</item>
+        <item>Preschool, Kindergarten, KG, Nursery</item>
+        <item>Grade 1</item>
+        <item>Grade 2</item>
+        <item>Grade 3</item>
+        <item>Grade 4</item>
+        <item>Grade 5</item>
+        <item>Grade 6</item>
+        <item>Grade 7</item>
+        <item>Grade 8</item>
+        <item>Grade 9</item>
+        <item>Grade 10</item>
+        <item>IGCSE</item>
+        <item>GCSE</item>
+        <item>O Level</item>
+        <item>Grade 11</item>
+        <item>AS Level</item>
+        <item>A Level</item>
+        <item>Grade 12</item>
+        <item>Diploma</item>
+        <item>Bachelors/Undergraduate</item>
+        <item>Master/Postgraduate</item>
+        <item>MPhil</item>
+        <item>Doctor/Phd</item>
+        <item>--Other--</item>
+        <item>Adult/Casual learning</item>
+    </string-array>
+
+    <string-array name="want_array">
+        <item>-- Select --</item>
+        <item>Tutoring</item>
+        <item>Assignment help</item>
+    </string-array>
+
 </resources>

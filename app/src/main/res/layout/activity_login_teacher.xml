@@ -105,6 +105,7 @@
         android:text="@string/login"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:fontFamily="@font/adamina"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

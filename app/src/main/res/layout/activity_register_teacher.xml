@@ -547,7 +547,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
                     android:hint="@string/profile_description"
-                    android:inputType="text"
                     android:textColor="@color/logo_text_color" />
             </com.google.android.material.textfield.TextInputLayout>
 

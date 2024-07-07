@@ -104,6 +104,7 @@
         android:backgroundTint="@color/button_color"
         android:text="@string/login"
         android:textColor="@color/white"
+        android:fontFamily="@font/adamina"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

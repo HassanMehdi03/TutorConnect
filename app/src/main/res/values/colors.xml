@@ -8,5 +8,6 @@
     <color name="password_toggle_color">#691CC1</color>
     <color name="input_field_box_stroke_color">#691CC1</color>
     <color name="status_bar_color">#B48EE0</color>
+    <color name="navbar_color">#B48EE0</color>
 
 </resources>
