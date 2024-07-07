@@ -76,7 +76,7 @@ public class ViewPostedRequirementAdapterTeacher extends RecyclerView.Adapter<Vi
             tvGenderPreference=itemView.findViewById(R.id.tvGenderPreference);
             tvTime=itemView.findViewById(R.id.tvTime);
             tvBudget=itemView.findViewById(R.id.tvBudget);
-            btnContact=itemView.findViewById(R.id.btnLogin);
+            btnContact=itemView.findViewById(R.id.btnContact);
         }
     }
 }

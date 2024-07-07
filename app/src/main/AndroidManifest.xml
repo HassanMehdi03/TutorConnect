@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TutorConnect"
         tools:targetApi="31" >
         <activity
-            android:name=".VerfiyEmailTeacher"
+            android:name=".VerifyEmailTeacher"
             android:exported="false" />
         <activity
             android:name=".SettingTeacher"
@@ -25,7 +25,7 @@
             android:name=".ViewPostedRequirementsTeacher"
             android:exported="false" />
         <activity
-            android:name=".FindTutor"
+            android:name=".FindTutorStudent"
             android:exported="false" />
         <activity
             android:name=".ViewPostedRequirementsStudent"

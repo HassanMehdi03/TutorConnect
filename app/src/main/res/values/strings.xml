@@ -71,6 +71,7 @@
     <string name="don_t_worry_it_happens_please_enter_the_email_we_will_send_you_email_on_this_mail">Don’t worry ! It happens. Please enter the email we will send you email on this mail.</string>
     <string name="email_verification">Email Verification</string>
     <string name="please_change_password_through_the_email_that_we_have_sent_you_and_then_click_on_the_save_button">Please change password through the email that we have sent you and then click on the save button</string>
+    <string name="please_verify_your_email_through_the_email_that_we_have_sent_you_and_then_click_on_the_save_button">Please verify your email through the email that we have sent you and then click on the save button</string>
     <string name="don_t_receive_email">Don’t receive email ?</string>
     <string name="resend">Resend</string>
     <string name="new_password">New Password</string>
@@ -116,12 +117,15 @@
     <string name="subject_details">Subject Details</string>
     <string name="time">Time</string>
     <string name="my_requirements">My Requirements</string>
-    <string name="tutor_name">Tutor name</string>
+    <string name="get_reviews">Get reviews</string>
+    <string name="refer_and_earn">Refer and earn</string>
+    <string name="promote_yourself">Promote yourself</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="posted_requirements">Posted Requirements</string>
+    <string name="contact">Contact</string>
+    <string name="email_already_verified">Email already verified</string>
+    <string name="tutor_name">Tutor Name</string>
     <string name="speciality">Speciality</string>
-    <string name="subjects">Subjects</string>
-    <string name="description">Description</string>
-    <string name="contact_tutor">Contact Tutor</string>
-    <string name="experience">Experience</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>
