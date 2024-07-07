@@ -116,6 +116,11 @@
     <string name="subject_details">Subject Details</string>
     <string name="time">Time</string>
     <string name="my_requirements">My Requirements</string>
+    <string name="experience">Experience</string>
+    <string name="subjects">Subjects</string>
+    <string name="speciality">Speciality</string>
+    <string name="tutor_name">Tutor Name</string>
+    <string name="description">Description</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>

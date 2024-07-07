@@ -8,8 +8,7 @@
     tools:context=".StudentHomePage">
 
 
-    <include layout="@layout/student_homepage_navbar"
-        />
+    <include layout="@layout/student_homepage_navbar" />
 
     <ImageView
         android:id="@+id/ivPost"
@@ -38,6 +37,7 @@
         app:layout_constraintStart_toStartOf="@id/ivPost"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/text_color"
+        android:textStyle="bold"
         />
 
     <ImageView
@@ -67,6 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/text_color"
         android:fontFamily="@font/adamina"
+        android:textStyle="bold"
         />
 
     <ImageView
@@ -96,6 +97,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/text_color"
         android:fontFamily="@font/adamina"
+        android:textStyle="bold"
         />
 
     <View
@@ -152,6 +154,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/text_color"
         android:fontFamily="@font/adamina"
+        android:textStyle="bold"
         />
 
     <ImageView
@@ -180,6 +183,7 @@
         app:layout_constraintStart_toStartOf="@id/ivSetting"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/text_color"
+        android:textStyle="bold"
         android:fontFamily="@font/adamina"
         />
 

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TutorConnect"
         tools:targetApi="31">
         <activity
+            android:name=".FindTutor"
+            android:exported="false" />
+        <activity
             android:name=".ViewPostedRequirementsStudent"
             android:exported="false" />
         <activity

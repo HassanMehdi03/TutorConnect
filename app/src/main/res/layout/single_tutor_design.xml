@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/PostRequirement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/post_requirement_card_view_color"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="@dimen/post_requirement_margin_top"
+                android:fontFamily="@font/adamina"
+                android:padding="13dp"
+                android:text="@string/tutor_name"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSpeciality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:fontFamily="@font/adamina"
+                android:padding="13dp"
+                android:text="@string/speciality"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <TextView
+                android:id="@+id/tvSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:fontFamily="@font/adamina"
+                android:padding="13dp"
+                android:text="@string/subjects"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSpeciality" />
+
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:fontFamily="@font/adamina"
+                android:padding="13dp"
+                android:text="@string/description"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSubject" />
+
+            <ImageView
+                android:id="@+id/ivGender"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="@dimen/post_requirement_margin_top"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDesc" />
+
+            <TextView
+                android:id="@+id/tvGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/adamina"
+                android:padding="2dp"
+                android:text="@string/gender"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/ivGender"
+                app:layout_constraintTop_toBottomOf="@id/tvDesc" />
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/adamina"
+                android:padding="8dp"
+                android:text="@string/location"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/ivGender"
+                app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+            <ImageView
+                android:id="@+id/ivFee"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/ic_budget"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivLocation" />
+
+            <TextView
+                android:id="@+id/tvFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/adamina"
+                android:padding="5dp"
+                android:text="@string/fee_in_us"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/ivFee"
+                app:layout_constraintTop_toBottomOf="@id/tvLocation" />
+
+            <ImageView
+                android:id="@+id/ivExperience"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="@dimen/margin_start_end"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/book"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFee" />
+
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_end"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/adamina"
+                android:padding="5dp"
+                android:text="@string/experience"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/ivExperience"
+                app:layout_constraintTop_toBottomOf="@id/tvFee" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvExperience"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Contact Tutor"
+                android:fontFamily="@font/adamina"
+                android:textSize="17sp"
+                android:id="@+id/btnContactTutor"
+                android:backgroundTint="@color/button_color"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
