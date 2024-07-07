@@ -5,8 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerifyEmailForPasswordResetTeacher">
-
+    tools:context=".VerifyEmailTeacher">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/view"
@@ -46,13 +45,28 @@
         app:layout_constraintTop_toBottomOf="@id/view" />
 
     <TextView
-        android:id="@+id/tv_verify_email"
+        android:id="@+id/tvNotVerified"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:padding="5dp"
-        android:text="@string/please_change_password_through_the_email_that_we_have_sent_you_and_then_click_on_the_save_button"
+        android:text="@string/please_verify_your_email_through_the_email_that_we_have_sent_you_and_then_click_on_the_save_button"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmailVerification" />
+
+    <TextView
+        android:id="@+id/tvVerified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:padding="5dp"
+        android:text="@string/email_already_verified"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:gravity="center_horizontal"
@@ -70,7 +84,7 @@
         android:textColor="@color/black"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_verify_email" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNotVerified" />
 
     <TextView
         android:id="@+id/tvResend"
@@ -84,7 +98,7 @@
         android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/tvEmailNotReceived"
-        app:layout_constraintTop_toBottomOf="@+id/tv_verify_email" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNotVerified" />
 
     <Button
         android:id="@+id/btnSave"
@@ -101,6 +115,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvEmailNotReceived"
-
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -162,7 +162,7 @@
 
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnContact"
                 android:layout_width="@dimen/button_width"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/button_color"

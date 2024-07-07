@@ -16,7 +16,7 @@
             android:name=".TeacherProfile"
             android:exported="false" />
         <activity
-            android:name=".VerfiyEmailTeacher"
+            android:name=".VerifyEmailTeacher"
             android:exported="false" />
         <activity
             android:name=".SettingTeacher"
@@ -28,7 +28,7 @@
             android:name=".ViewPostedRequirementsTeacher"
             android:exported="false" />
         <activity
-            android:name=".FindTutor"
+            android:name=".FindTutorStudent"
             android:exported="false" />
         <activity
             android:name=".ViewPostedRequirementsStudent"
