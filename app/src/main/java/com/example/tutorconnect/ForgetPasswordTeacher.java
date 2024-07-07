@@ -66,7 +66,7 @@ public class ForgetPasswordTeacher extends AppCompatActivity
 
     private void moveToVerifyEmailPage()
     {
-        startActivity(new Intent(ForgetPasswordTeacher.this,VerifyEmailTeacher.class));
+        startActivity(new Intent(ForgetPasswordTeacher.this, VerifyEmailForPasswordResetTeacher.class));
     }
 
     private void init()

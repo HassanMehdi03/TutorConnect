@@ -3,8 +3,12 @@ package com.example.tutorconnect;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,17 +20,17 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ViewPostedRequirementsStudent extends AppCompatActivity {
+public class ViewPostedRequirementsTeacher extends AppCompatActivity {
 
     private RecyclerView rvList;
-    private ViewPostedRequirementAdapterStudent adapter;
+    private ViewPostedRequirementAdapterTeacher adapter;
     private ArrayList<PostRequirement> postRequirements;
     private DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_posted_requirements_student);
+        setContentView(R.layout.activity_view_posted_requirements_teacher);
 
         init();
         loadData();
@@ -38,7 +42,7 @@ public class ViewPostedRequirementsStudent extends AppCompatActivity {
     {
         rvList.setHasFixedSize(true);
         rvList.setLayoutManager(new LinearLayoutManager(this));
-        adapter=new ViewPostedRequirementAdapterStudent(this,postRequirements);
+        adapter=new ViewPostedRequirementAdapterTeacher(this,postRequirements);
         rvList.setAdapter(adapter);
     }
 
@@ -74,7 +78,7 @@ public class ViewPostedRequirementsStudent extends AppCompatActivity {
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(ViewPostedRequirementsStudent.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ViewPostedRequirementsTeacher.this, error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 

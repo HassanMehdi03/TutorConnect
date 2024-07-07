@@ -7,4 +7,237 @@
     android:layout_height="match_parent"
     tools:context=".TeacherHomePage">
 
+    <include layout="@layout/teacher_homepage_navbar"
+        />
+
+    <ImageView
+        android:id="@+id/ivViewPost"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/llNavBar"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_view_post"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvViewPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginStart="50dp"
+        android:padding="6dp"
+        android:text="@string/view_posted_requirements"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/llNavBar"
+        app:layout_constraintStart_toStartOf="@id/ivViewPost"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/adamina"
+        />
+
+    <ImageView
+        android:id="@+id/ivGetReview"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivViewPost"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_review"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvGetReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginStart="55dp"
+        android:padding="2dp"
+        android:text="@string/get_reviews"
+        android:textSize="16sp"
+        android:fontFamily="@font/adamina"
+        app:layout_constraintTop_toBottomOf="@+id/tvViewPost"
+        app:layout_constraintStart_toStartOf="@id/ivGetReview"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text_color"
+        />
+
+    <ImageView
+        android:id="@+id/ivEarn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivGetReview"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_earn"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvEarn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginStart="50dp"
+        android:padding="6dp"
+        android:text="@string/refer_and_earn"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvGetReview"
+        app:layout_constraintStart_toStartOf="@id/ivEarn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/adamina"
+        />
+
+    <ImageView
+        android:id="@+id/ivPromote"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivEarn"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_promote"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvPromote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginStart="50dp"
+        android:padding="6dp"
+        android:text="@string/promote_yourself"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvEarn"
+        app:layout_constraintStart_toStartOf="@id/ivPromote"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/adamina"
+        />
+
+    <ImageView
+        android:id="@+id/ivVerifyEmail"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivPromote"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_verify_email"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvVerifyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="50dp"
+        android:padding="6dp"
+        android:text="@string/verify_email"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvPromote"
+        app:layout_constraintStart_toStartOf="@id/ivVerifyEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/adamina"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVerifyEmail"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        android:background="#FF691CC1"
+        android:id="@+id/view"
+        />
+
+    <TextView
+        android:id="@+id/tvUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_start_end"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:text="@string/user_info"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserInfo"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_profile"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginStart="50dp"
+        android:padding="6dp"
+        android:text="@string/profile"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvUserInfo"
+        app:layout_constraintStart_toStartOf="@id/ivProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/adamina"
+        />
+
+    <ImageView
+        android:id="@+id/ivSetting"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfile"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/ic_setting"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/icons_margin_top"
+        android:layout_marginStart="50dp"
+        android:padding="6dp"
+        android:text="@string/setting"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvProfile"
+        app:layout_constraintStart_toStartOf="@id/ivSetting"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/adamina"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

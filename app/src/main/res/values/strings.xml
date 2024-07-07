@@ -116,6 +116,12 @@
     <string name="subject_details">Subject Details</string>
     <string name="time">Time</string>
     <string name="my_requirements">My Requirements</string>
+    <string name="get_reviews">Get reviews</string>
+    <string name="refer_and_earn">Refer and earn</string>
+    <string name="promote_yourself">Promote yourself</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="posted_requirements">Posted Requirements</string>
+    <string name="contact">Contact</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>
