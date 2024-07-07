@@ -9,5 +9,6 @@
     <dimen name="logo_width">80dp</dimen>
     <dimen name="logo_height">70dp</dimen>
     <dimen name="icons_margin_top">20dp</dimen>
+    <dimen name="post_requirement_margin_top">15dp</dimen>
 </resources>
 

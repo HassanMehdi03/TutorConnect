@@ -112,6 +112,10 @@
     <string name="please_select_your_level">Please select your level</string>
     <string name="please_select_your_want">Please select what you want</string>
     <string name="requirement_posted">Requirement Posted</string>
+    <string name="post_details">Post Details</string>
+    <string name="subject_details">Subject Details</string>
+    <string name="time">Time</string>
+    <string name="my_requirements">My Requirements</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>
