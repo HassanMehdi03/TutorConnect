@@ -123,6 +123,14 @@
     <string name="description">Description</string>
     <string name="contact_tutor">Contact Tutor</string>
     <string name="experience">Experience</string>
+    <string name="logout">Logout</string>
+    <string name="contact">Contact</string>
+    <string name="get_reviews">Get reviews</string>
+    <string name="refer_and_earn">Refer and earn</string>
+    <string name="promote_yourself">Promote yourself</string>
+    <string name="verify_email">Verify email</string>
+    <string name="email_already_verified">Email already verified</string>
+    <string name="posted_requirements">Posted Requirements</string>
     <string-array name="grades_array">
         <item>Select Grade</item>
         <item>Grade 1</item>

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileStudent">
+
     <include
         android:id="@+id/llNavBar"
         layout="@layout/teacher_profile_navbar"
@@ -35,142 +36,134 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llNavBar">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/llNavBar"
+        android:layout_marginTop="20dp"
+        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivEmail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="@dimen/post_requirement_margin_top"
+            android:layout_marginEnd="@dimen/margin_start_end"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/ic_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/ivEmail"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="@dimen/post_requirement_margin_top"
-                android:layout_marginEnd="@dimen/margin_start_end"
-                android:contentDescription="@string/logo"
-                android:src="@drawable/ic_email"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/adamina"
+            android:padding="2dp"
+            android:text="@string/email"
+            android:textColor="@color/text_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/ivEmail"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tvEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_start_end"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/adamina"
-                android:padding="2dp"
-                android:text="@string/email"
-                android:textColor="@color/text_color"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@id/ivEmail"
-                app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/ivName"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="@dimen/margin_start_end"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/ic_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEmail" />
 
-            <ImageView
-                android:id="@+id/ivName"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="@dimen/margin_start_end"
-                android:contentDescription="@string/logo"
-                android:src="@drawable/ic_name"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/adamina"
+            android:padding="8dp"
+            android:text="@string/name"
+            android:textColor="@color/text_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/ivEmail"
+            app:layout_constraintTop_toBottomOf="@id/tvEmail" />
 
-            <TextView
-                android:id="@+id/tvName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_start_end"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/adamina"
-                android:padding="8dp"
-                android:text="@string/name"
-                android:textColor="@color/text_color"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@id/ivEmail"
-                app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="@dimen/margin_start_end"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivName" />
 
-            <ImageView
-                android:id="@+id/ivPhone"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="@dimen/margin_start_end"
-                android:contentDescription="@string/logo"
-                android:src="@drawable/phone"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivName" />
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/adamina"
+            android:padding="5dp"
+            android:text="@string/phone_number"
+            android:textColor="@color/text_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/ivPhone"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
 
-            <TextView
-                android:id="@+id/tvPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_start_end"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/adamina"
-                android:padding="5dp"
-                android:text="@string/phone_number"
-                android:textColor="@color/text_color"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@id/ivPhone"
-                app:layout_constraintTop_toBottomOf="@id/tvName" />
-
-            <ImageView
-                android:id="@+id/ivLocation"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="@dimen/margin_start_end"
-                android:contentDescription="@string/logo"
-                android:src="@drawable/ic_location"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+        <ImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="@dimen/margin_start_end"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPhone" />
 
 
-            <TextView
-                android:id="@+id/tvLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_start_end"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/adamina"
-                android:padding="5dp"
-                android:text="@string/location"
-                android:textColor="@color/text_color"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@id/ivPhone"
-                app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/adamina"
+            android:padding="5dp"
+            android:text="@string/location"
+            android:textColor="@color/text_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/ivPhone"
+            app:layout_constraintTop_toBottomOf="@id/tvPhone" />
 
 
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/icons_margin_top"
+            android:backgroundTint="@color/button_color"
+            android:fontFamily="@font/adamina"
+            android:text="@string/logout"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLocation" />
 
-            <Button
-                android:id="@+id/btnContactTutor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/button_color"
-                android:fontFamily="@font/adamina"
-                android:text="@string/logout"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLocation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
