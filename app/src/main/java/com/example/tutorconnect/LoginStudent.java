@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,6 +12,9 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricManager;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -22,6 +26,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.concurrent.Executor;
+
 public class LoginStudent extends AppCompatActivity {
 
     private ProgressBar pbLoading;
@@ -30,6 +36,7 @@ public class LoginStudent extends AppCompatActivity {
     private TextInputEditText etEmail,etPassword;
     private FirebaseAuth auth;
     private FirebaseUser user;
+    private ImageView ivFingerprint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,45 @@ public class LoginStudent extends AppCompatActivity {
         tvRegister.setOnClickListener(v->registerStudent());
         btnLogin.setOnClickListener(v->login());
         tvForgetPassword.setOnClickListener(v->moveToForgetPasswordStudent());
+        ivFingerprint.setOnClickListener(v->userAuthentication());
+
+    }
+
+    private void userAuthentication()
+    {
+        BiometricManager biometricManager=BiometricManager.from(this);
+
+        if (biometricManager.canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_STRONG) == BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE) {
+            Toast.makeText(this, "No biometric features available on this device.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Executor executor= ContextCompat.getMainExecutor(this);
+
+        BiometricPrompt biometricPrompt=new BiometricPrompt(LoginStudent.this, executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                moveToStudentHomePage();
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+            }
+        });
+
+        BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Biometric Authentication")
+                .setNegativeButtonText("Cancel")
+                .build();
+        biometricPrompt.authenticate(promptInfo);
 
     }
 
@@ -105,6 +151,7 @@ public class LoginStudent extends AppCompatActivity {
         pbLoading=findViewById(R.id.pbLoading);
         tvForgetPassword=findViewById(R.id.tvForgetPassword);
         pbLoading.setVisibility(View.GONE);
+        ivFingerprint=findViewById(R.id.ivFingerprint);
 
         auth= FirebaseAuth.getInstance();
         user=auth.getCurrentUser();

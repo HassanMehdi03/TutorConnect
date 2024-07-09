@@ -96,6 +96,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_password" />
 
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_fingerprint"
+        app:layout_constraintTop_toBottomOf="@id/tvForgetPassword"
+        android:id="@+id/ivFingerprint"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="@dimen/margin_start_end"
+        />
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="@dimen/button_width"
